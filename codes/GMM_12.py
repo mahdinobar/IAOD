@@ -210,9 +210,6 @@ def merged_point_cloud(image,depth,index):
     pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
     open3d.draw_geometries([pcd])
 
-
-
-
 # part_mean, part_covariance=GMM_separate(image,depth)
 # part_mean_2,part_covariance_2=GMM_separate(image_3,depth_3)
 #

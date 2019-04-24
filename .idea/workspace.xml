@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c255caa4-277b-4cd6-9d14-81bf2e87e641" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IAOD.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/GMM_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/GMM_12.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codes/GMM_12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="154">
+              <caret line="198" column="15" lean-forward="true" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
               <folding>
                 <element signature="e#112#132#0" expanded="true" />
               </folding>
@@ -30,6 +28,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/codes/GMM_12.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
@@ -59,6 +64,11 @@
             <path>
               <item name="IAOD" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="IAOD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.5 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -95,10 +105,19 @@
       <option name="presentableId" value="Default" />
       <updated>1556100454161</updated>
     </task>
+    <task id="LOCAL-00001" summary="External Libraries for this project are also added to github.">
+      <created>1556100654734</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556100654734</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1217" height="1029" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -119,10 +138,15 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="External Libraries for this project are also added to github." />
+    <option name="LAST_COMMIT_MESSAGE" value="External Libraries for this project are also added to github." />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/codes/GMM_12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="154">
+          <caret line="198" column="15" lean-forward="true" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
           <folding>
             <element signature="e#112#132#0" expanded="true" />
           </folding>
