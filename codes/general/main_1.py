@@ -31,13 +31,13 @@ while 1:
     if key==27:
         break
 
-part_mean,part_covariance = model(image,depth).model_1()
-part_mean_2,part_covariance_2=model(image_2,depth_2).model_1()
+mean_set_1,cov_set_1 = model(image,depth).model_1()
+mean_set_2,cov_set_2=model(image_2,depth_2).model_1()
 
-covariance_distance=models_distance(part_mean,part_covariance,part_mean_2,part_covariance_2).covariance_distance()
-mean_distance=models_distance(part_mean,part_covariance,part_mean_2,part_covariance_2).mean_distance()
-KL_divergence=models_distance(part_mean,part_covariance,part_mean_2,part_covariance_2).KL_divergence()
-Hellinger=models_distance(part_mean,part_covariance,part_mean_2,part_covariance_2).Hellinger()
+covariance_distance=models_distance(mean_set_1,cov_set_1,mean_set_2,cov_set_2).covariance_distance()
+mean_distance=models_distance(mean_set_1,cov_set_1,mean_set_2,cov_set_2).mean_distance()
+KL_divergence=models_distance(mean_set_1,cov_set_1,mean_set_2,cov_set_2).KL_divergence()
+Hellinger=models_distance(mean_set_1,cov_set_1,mean_set_2,cov_set_2).Hellinger()
 
 kl_argsort=np.argsort(KL_divergence,axis=0)#to see if the result is correct
 

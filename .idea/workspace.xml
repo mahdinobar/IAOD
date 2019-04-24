@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c255caa4-277b-4cd6-9d14-81bf2e87e641" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/codes/general/Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codes/general/main_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codes/general/measure_distance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codes/general/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/general/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/main_1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="399">
+              <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
               <folding>
                 <element signature="e#455#471#0" expanded="true" />
               </folding>
@@ -88,10 +84,11 @@
       <find>depth</find>
       <find>GMM_separate</find>
       <find>ref_point</find>
-      <find>part_mean</find>
       <find>part_mean_2</find>
+      <find>part_mean</find>
       <find>part_covariance_2</find>
       <find>part_covariance</find>
+      <find>covariance</find>
     </findStrings>
     <replaceStrings>
       <replace>cropped_image</replace>
@@ -106,6 +103,11 @@
       <replace>self.mean_set_2</replace>
       <replace>self.covariance_set_2</replace>
       <replace>self.covariance_set_1</replace>
+      <replace>mean_set_1</replace>
+      <replace>mean_set_2</replace>
+      <replace>covariance_set_2</replace>
+      <replace>covariance_set_1</replace>
+      <replace>cov</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -271,13 +273,13 @@
     <frame x="64" y="-4" width="1217" height="1029" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -378,8 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="399">
+          <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
           <folding>
             <element signature="e#455#471#0" expanded="true" />
           </folding>
