@@ -8,11 +8,11 @@ from models import model
 from Data import data
 from measure_distance import models_distance
 
-image,depth, cropped_window=data.get_data(None)
-np.save('image_1.npy', image)
-np.save('depth_1.npy', depth)
-# image=np.load('image_1.npy')
-# depth=np.load('depth_1.npy')
+# image,depth, cropped_window=data.get_data(None)
+# np.save('image_1.npy', image)
+# np.save('depth_1.npy', depth)
+image=np.load('image_1.npy')
+depth=np.load('depth_1.npy')
 # image=np.load('GMM_10_midpresentation_image_1.npy')
 # depth=np.load('GMM_10_midpresentation_depth_1.npy')
 
@@ -22,11 +22,11 @@ while 1:
     if key==27:
         break
 
-image_2,depth_2,_=data.get_data(cropped_window)
-np.save('image_2.npy', image_2)
-np.save('depth_2.npy', depth_2)
-# image_2=np.load('image_2.npy')
-# depth_2=np.load('depth_2.npy')
+# image_2,depth_2,_=data.get_data(cropped_window)
+# np.save('image_2.npy', image_2)
+# np.save('depth_2.npy', depth_2)
+image_2=np.load('image_2.npy')
+depth_2=np.load('depth_2.npy')
 # image_2=np.load('GMM_10_midpresentation_image_3.npy')
 # depth_2=np.load('GMM_10_midpresentation_depth_3.npy')
 
