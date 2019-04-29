@@ -4,7 +4,7 @@ import open3d
 import numpy as np
 from sklearn import mixture
 from sklearn.preprocessing import StandardScaler
-
+from utils import point_cloud
 
 class model():
 
@@ -57,19 +57,21 @@ class model():
             self.image_contour_center.fill(255.)  # here we create a white self.image
             self.image_contour_center[contours_mean[n_contour][1]][contours_mean[n_contour][0]] = self.image[contours_mean[n_contour][1]][
                 contours_mean[n_contour][0]] # here we put non white color on the mean point of contour
-            self.image_contour_center_3d = open3d.Image(self.image_contour_center)
-            self.depth_3d = open3d.Image(self.depth)
-            rgbd_image = open3d.create_rgbd_image_from_color_and_depth(self.image_contour_center_3d, self.depth_3d,
-                                                                       convert_rgb_to_intensity=False)
-            fx = 594.21
-            fy = 591.04
-            a = -0.0030711
-            b = 3.3309495
-            cx = 339.5
-            cy = 242.7
-            intrinsic = open3d.PinholeCameraIntrinsic(self.depth.shape[1], self.depth.shape[0], fx, fy, cx, cy)
-            pcd_contour_mean = open3d.create_point_cloud_from_rgbd_image(rgbd_image, intrinsic)
-            pcd_contour_mean.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
+            # self.image_contour_center_3d = open3d.Image(self.image_contour_center)
+            # self.depth_3d = open3d.Image(self.depth)
+            # rgbd_image = open3d.create_rgbd_image_from_color_and_depth(self.image_contour_center_3d, self.depth_3d,
+            #                                                            convert_rgb_to_intensity=False)
+            # fx = 594.21
+            # fy = 591.04
+            # a = -0.0030711
+            # b = 3.3309495
+            # cx = 339.5
+            # cy = 242.7
+            # intrinsic = open3d.PinholeCameraIntrinsic(self.depth.shape[1], self.depth.shape[0], fx, fy, cx, cy)
+            # pcd_contour_mean = open3d.create_point_cloud_from_rgbd_image(rgbd_image, intrinsic)
+            # pcd_contour_mean.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
+            pcd_contour_mean=point_cloud(self.image_contour_center,self.depth)
+
 
             for y in range(0, self.image.shape[0]):
                 for x in range(0, self.image.shape[1]):
@@ -85,13 +87,16 @@ class model():
                 if key == 27:
                     break
 
-            self.image_3d = open3d.Image(self.image)
-            self.depth_3d = open3d.Image(self.depth)
-            rgbd_image = open3d.create_rgbd_image_from_color_and_depth(self.image_3d, self.depth_3d, convert_rgb_to_intensity=False)
-            intrinsic = open3d.PinholeCameraIntrinsic(self.depth.shape[1], self.depth.shape[0], fx, fy, cx, cy)
-            pcd = open3d.create_point_cloud_from_rgbd_image(rgbd_image, intrinsic)
-            pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
-            open3d.draw_geometries([pcd])
+            # self.image_3d = open3d.Image(self.image)
+            # self.depth_3d = open3d.Image(self.depth)
+            # rgbd_image = open3d.create_rgbd_image_from_color_and_depth(self.image_3d, self.depth_3d, convert_rgb_to_intensity=False)
+            # intrinsic = open3d.PinholeCameraIntrinsic(self.depth.shape[1], self.depth.shape[0], fx, fy, cx, cy)
+            # pcd = open3d.create_point_cloud_from_rgbd_image(rgbd_image, intrinsic)
+            # pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
+            pcd=point_cloud(self.image,self.depth)
+            # open3d.draw_geometries([pcd])
+            # reg=open3d.registration.registration_icp(pcd,pcd,0.001)
+            # fpfh=open3d.registration.compute_fpfh_feature(pcd, KDTreeSearchParamHybrid(radius = 0.1, max_nn = 100))
             pcd_points = np.asarray(pcd.points)
             pcd_colours = np.asarray(pcd.colors)
             X = np.hstack((pcd_points, pcd_colours))
@@ -135,9 +140,12 @@ class model():
 
     def model_2(self,features):
         """
-        GMM with K=number of detected closed contours by opencv, OpenCV contour, open3d, normalization, no PCA, 3 features (x,y,z)
-        it can detect which object is missing at the same frame
+        GMM with K=number of detected closed contours by opencv, OpenCV contour, open3d, normalization, no PCA, 4 features (x,y,z,RED)
+        removed background
+        removed the object shade by putting red color ar inside each contour
+        with cluster mean initialization
 
+        This now is correct only for features =[0,1,2,3]
 
 
         """
@@ -224,6 +232,7 @@ class model():
         pcd_colours = np.asarray(pcd.colors)
         X = np.hstack((pcd_points, pcd_colours))
 
+        X = X[:, features]
         # Start Standardize features==============================================================================
         scaler = StandardScaler()
         scaler.fit(X)
@@ -237,8 +246,8 @@ class model():
         cluster_span = 1
         n_components_range = range(k1, k1 + cluster_span)
         cv_types = ['full']
-        X_copy = np.copy(X)
-        X = X[:, features]
+        X_copy1 = np.copy(X)
+        X_copy=np.hstack((X_copy1,np.empty((X_copy1.shape[0],2))))
         for cv_type in cv_types:
             for n_components in n_components_range:
                 # Fit a Gaussian mixture with EM
