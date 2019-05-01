@@ -25,7 +25,7 @@ def point_cloud(image,depth):
     intrinsic = open3d.PinholeCameraIntrinsic(depth.shape[1], depth.shape[0], fx, fy, cx, cy)
     pcd = open3d.create_point_cloud_from_rgbd_image(rgbd, intrinsic)
     pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
-    open3d.draw_geometries([pcd])
+    # open3d.draw_geometries([pcd])
     return pcd
 
 

@@ -5,6 +5,8 @@ import numpy as np
 from sklearn import mixture
 from sklearn.preprocessing import StandardScaler
 from utils import point_cloud
+from sklearn.decomposition import PCA
+
 
 class model():
 
@@ -269,4 +271,111 @@ class model():
         pcd.points = Vector3dVector(X_copy[:, 0:3])
         open3d.draw_geometries([pcd])
 
+        return part_mean, part_covariance
+
+    def model_3(self,num_features=33):
+        """
+        same as model_1 but gaussians are trained with FPFH features(33-dimensional) of each point
+        First I created model_3 based on model_1, then I use point cloud of image and depth data to
+         calculate the surface normals and then I compute FPFH of the point cloud which has same
+         number of points but it has 33 features. The I use FPFH features to train each gaussians.
+          Finally after tuning the parameters of FPFH at the best result it can only match the
+          objects with each other but it cannot be used to distinguish which object has been merged
+          with which one. Also, the problem that if we take two frames same frames with exactly same
+           objects (noise effect) still exists and if it is solved it might help us to have the results
+            that we need. I also tried to apply PCA and change number of features of FPFH for training
+            gaussians and training with and without providing initial conditions for gaussian mean, but
+             none of them helps us.
+        """
+        # self.image = np.load("image_contours_4.npy")
+        # self.depth = np.load("self.depth_contours_4.npy")
+        imgray = cv.cvtColor(self.image, cv.COLOR_BGR2GRAY)
+        kernel = np.ones((16, 16), np.uint8)
+        imgray = cv.erode(imgray, kernel, iterations=1)
+        ret, thresh = cv.threshold(imgray, 127, 255, 0)
+        # while 1:
+        #     cv.imshow('thresh', thresh)
+        #     key = cv.waitKey(1)
+        #     if key == 27:
+        #         break
+        contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE,
+                                              cv.CHAIN_APPROX_NONE)  # contours contains here the pixel index of the corresponding points
+        contours_mean = np.empty([len(contours), 2])
+        for n_contour in range(0, len(contours)):
+            # find the mean value for the detected contours
+            contours_mean[n_contour][:] = (contours[n_contour].mean(axis=0))
+        contours_mean = np.around(contours_mean, decimals=0).astype(int)
+        self.image_copy = np.copy(self.image)
+        self.depth_copy = np.copy(self.depth)
+        part_mean = np.empty([contours_mean.shape[0] - 1, num_features])  # we cancel out the big frame contour
+        part_covariance = np.empty([contours_mean.shape[0] - 1, num_features, num_features])
+
+
+        for n_contour in range(1, len(contours)):  # remove out first contour
+            self.image = np.copy(self.image_copy)
+            self.depth = np.copy(self.depth_copy)
+            self.image_contour_center = np.copy(self.image_copy)
+            self.image_contour_center.fill(255.)  # here we create a white self.image
+            self.image_contour_center[contours_mean[n_contour][1]][contours_mean[n_contour][0]] = self.image[contours_mean[n_contour][1]][
+                contours_mean[n_contour][0]] # here we put non white color on the mean point of contour
+
+            pcd_contour_mean=point_cloud(self.image_contour_center,self.depth)
+
+
+            for y in range(0, self.image.shape[0]):
+                for x in range(0, self.image.shape[1]):
+                    if cv.pointPolygonTest(contours[n_contour], (x, y), False) < 1:
+                        self.image[y, x, :] = 100.
+                        self.depth[y, x] = 100.
+            self.image_contours = np.copy(self.image)
+            cv.drawContours(self.image_contours, contours[n_contour], -1, (0, 255, 0), 3)
+
+            pcd=point_cloud(self.image,self.depth)
+            voxel_size=0.05
+            radius_normal=voxel_size*2
+            open3d.geometry.estimate_normals(pcd, open3d.geometry.KDTreeSearchParamHybrid(
+                radius=radius_normal, max_nn=13))
+            radius_feature = voxel_size * 5
+            pcd_fpfh = open3d.registration.compute_fpfh_feature(pcd,
+                                            open3d.geometry.KDTreeSearchParamHybrid(radius=radius_feature, max_nn=100))
+
+            X=pcd_fpfh.data.transpose()
+
+            # Start Standardize features==============================================================================
+            scaler = StandardScaler()
+            scaler.fit(X)
+            X = scaler.transform(X)  # here X_init has the big frame also
+            X_init = X[np.asarray(pcd_contour_mean.colors).argsort(axis=0)[0, 0]]
+            # End  Standardize features==============================================================================
+
+            k1 = 1
+            pcd_points = np.asarray(pcd.points)
+            pcd_colours = np.asarray(pcd.colors)
+            X_old = np.hstack((pcd_points, pcd_colours))
+            X = X[X_old[:, 2] < -0.00041, :]  # this is used to remove out the background witch is a way higher
+            X_old = X_old[X_old[:, 2] < -0.00041, :]
+            cluster_span = 1
+            n_components_range = range(k1, k1 + cluster_span)
+            cv_types = ['full']
+            X = X[:, :num_features]
+            for cv_type in cv_types:
+                for n_components in n_components_range:
+                    # Fit a Gaussian mixture with EM
+                    gmm = mixture.GaussianMixture(n_components=n_components,
+                                                  covariance_type=cv_type,
+                                                  means_init=np.reshape(X_init[:num_features],(1,num_features)))
+                    gmm.fit(X)
+                    print("GMM number of gaussians(k)= ", n_components)
+            part_mean[n_contour - 1, :] = (gmm.means_)
+            part_covariance[n_contour - 1, :] = (gmm.covariances_)
+            Y_ = gmm.predict(X)
+            color = np.array(
+                [[204, 0, 0], [0, 204, 0], [0, 0, 204], [255, 0, 127], [255, 255, 0], [127, 0, 255], [255, 128, 0],
+                 [102, 51, 0], [255, 153, 153], [153, 255, 255], [0, 102, 102]]) / 255
+            for i in range(np.unique(Y_).min(), np.unique(Y_).max() + 1):
+                # plt.scatter(X[Y_ == i, 0], X[Y_ == i, 1], .8, color=color)
+                X_old[Y_ == i, 3:6] = color[i]
+            pcd.colors = Vector3dVector(X_old[:, 3:6])
+            pcd.points = Vector3dVector(X_old[:, 0:3])
+            open3d.draw_geometries([pcd])
         return part_mean, part_covariance
