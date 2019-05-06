@@ -51,7 +51,6 @@ class model():
         part_mean = np.empty([contours_mean.shape[0] - 1, 3])  # we cancel out the big frame contour
         part_covariance = np.empty([contours_mean.shape[0] - 1, 3, 3])
 
-
         for n_contour in range(1, len(contours)):  # remove out first contour
             self.image = np.copy(self.image_copy)
             self.depth = np.copy(self.depth_copy)
@@ -59,22 +58,7 @@ class model():
             self.image_contour_center.fill(255.)  # here we create a white self.image
             self.image_contour_center[contours_mean[n_contour][1]][contours_mean[n_contour][0]] = self.image[contours_mean[n_contour][1]][
                 contours_mean[n_contour][0]] # here we put non white color on the mean point of contour
-            # self.image_contour_center_3d = open3d.Image(self.image_contour_center)
-            # self.depth_3d = open3d.Image(self.depth)
-            # rgbd_image = open3d.create_rgbd_image_from_color_and_depth(self.image_contour_center_3d, self.depth_3d,
-            #                                                            convert_rgb_to_intensity=False)
-            # fx = 594.21
-            # fy = 591.04
-            # a = -0.0030711
-            # b = 3.3309495
-            # cx = 339.5
-            # cy = 242.7
-            # intrinsic = open3d.PinholeCameraIntrinsic(self.depth.shape[1], self.depth.shape[0], fx, fy, cx, cy)
-            # pcd_contour_mean = open3d.create_point_cloud_from_rgbd_image(rgbd_image, intrinsic)
-            # pcd_contour_mean.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
             pcd_contour_mean=point_cloud(self.image_contour_center,self.depth)
-
-
             for y in range(0, self.image.shape[0]):
                 for x in range(0, self.image.shape[1]):
                     if cv.pointPolygonTest(contours[n_contour], (x, y), False) < 1:
@@ -88,13 +72,6 @@ class model():
                 key = cv.waitKey(1)
                 if key == 27:
                     break
-
-            # self.image_3d = open3d.Image(self.image)
-            # self.depth_3d = open3d.Image(self.depth)
-            # rgbd_image = open3d.create_rgbd_image_from_color_and_depth(self.image_3d, self.depth_3d, convert_rgb_to_intensity=False)
-            # intrinsic = open3d.PinholeCameraIntrinsic(self.depth.shape[1], self.depth.shape[0], fx, fy, cx, cy)
-            # pcd = open3d.create_point_cloud_from_rgbd_image(rgbd_image, intrinsic)
-            # pcd.transform([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
             pcd=point_cloud(self.image,self.depth)
             # open3d.draw_geometries([pcd])
             # reg=open3d.registration.registration_icp(pcd,pcd,0.001)
@@ -103,15 +80,23 @@ class model():
             pcd_colours = np.asarray(pcd.colors)
             X = np.hstack((pcd_points, pcd_colours))
 
-            # Start Standardize features==============================================================================
+            #standardize features
             scaler = StandardScaler()
             scaler.fit(X)
             X = scaler.transform(X)  # here X_init has the big frame also
             X_init = X[np.asarray(pcd_contour_mean.colors).argsort(axis=0)[0, 0]]
-            # End  Standardize features==============================================================================
 
+
+            #downsampling the point cloud to pick the average value inside each voxel
+            downpcd = open3d.voxel_down_sample(pcd, voxel_size=0.0000001)
+            pcd_points = np.asarray(downpcd.points)
+            pcd_colours = np.asarray(downpcd.colors)
+            X = np.hstack((pcd_points, pcd_colours))
+            scaler = StandardScaler()
+            scaler.fit(X)
+            X = scaler.transform(X)
             k1 = 1
-            X = X[X[:, 2] < 0.14, :]  # this is used to remove out the background witch is a way higher
+            X = X[X[:, 2] < -0.0004, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
             cluster_span = 1
             n_components_range = range(k1, k1 + cluster_span)
             cv_types = ['full']
