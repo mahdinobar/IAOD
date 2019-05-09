@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/general/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/main_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/general/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,41 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/GMM_10.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1193">
-              <caret line="133" column="21" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/GMM_11.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codes/general/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="93" column="52" lean-forward="true" selection-start-line="90" selection-start-column="12" selection-end-line="93" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#7401#13850#0" />
-              </folding>
+            <state relative-caret-position="1020">
+              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -57,8 +27,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+            <state relative-caret-position="27">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+              <folding>
+                <element signature="e#9#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codes/general/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="428" column="111" selection-start-line="428" selection-start-column="111" selection-end-line="428" selection-end-column="111" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#6295#12744#0" />
+                <element signature="e#12793#19015#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.5/dist-packages/sklearn/utils/validation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="581" selection-start-line="581" selection-end-line="581" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codes/general/Data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-412">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -66,12 +71,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/measure_distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-90">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#575#978#0" />
                 <element signature="e#1017#1402#0" />
-                <element signature="e#2303#3148#0" />
+                <element signature="e#1441#2268#0" />
               </folding>
             </state>
           </provider>
@@ -88,16 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image</find>
-      <find>depth</find>
-      <find>GMM_separate</find>
-      <find>ref_point</find>
-      <find>part_mean_2</find>
-      <find>part_covariance_2</find>
-      <find>covariance</find>
-      <find>erode</find>
-      <find>k1</find>
-      <find>contours</find>
       <find>image_contour_center</find>
       <find>n_contour</find>
       <find>copy</find>
@@ -108,19 +103,28 @@
       <find>self.depth</find>
       <find>part_mean</find>
       <find>X_copy</find>
-      <find>draw</find>
       <find>full</find>
       <find>print</find>
       <find>pca</find>
       <find>33</find>
       <find>pcd_contour_mean</find>
-      <find>point_cloud</find>
       <find>pcd_points</find>
       <find>load</find>
       <find>vector</find>
+      <find>image</find>
+      <find>depth</find>
+      <find>depth2</find>
+      <find>image2</find>
+      <find>utils</find>
+      <find>point_cloud</find>
+      <find>prepare_dataset</find>
+      <find>draw</find>
+      <find>pcd_source</find>
+      <find>a</find>
+      <find>depth_2</find>
+      <find>Vector3dVector</find>
     </findStrings>
     <replaceStrings>
-      <replace>cropped_image</replace>
       <replace>ropped_depth</replace>
       <replace>self.image</replace>
       <replace>self.depth</replace>
@@ -145,6 +149,12 @@
       <replace>pcd</replace>
       <replace>X_old</replace>
       <replace>num_features</replace>
+      <replace>image_source</replace>
+      <replace>depth_source</replace>
+      <replace>depth_target</replace>
+      <replace>image_target</replace>
+      <replace>target_points</replace>
+      <replace>depth_2_source</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -161,8 +171,8 @@
         <option value="$PROJECT_DIR$/codes/general/cropped_window.py" />
         <option value="$PROJECT_DIR$/codes/general/Data.py" />
         <option value="$PROJECT_DIR$/codes/general/measure_distance.py" />
-        <option value="$PROJECT_DIR$/codes/general/utils.py" />
         <option value="$PROJECT_DIR$/codes/GMM_11.py" />
+        <option value="$PROJECT_DIR$/codes/general/utils.py" />
         <option value="$PROJECT_DIR$/codes/general/main_1.py" />
         <option value="$PROJECT_DIR$/codes/general/models.py" />
       </list>
@@ -180,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,7 +222,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,11 +371,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/codes/general/main_1.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/codes/GMM_10.py</url>
           <line>206</line>
           <option name="timeStamp" value="27" />
@@ -375,33 +380,36 @@
           <line>45</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/codes/general/models.py</url>
-          <line>97</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>a=np.zeros(np.asarray(pcd_3.points).shape)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>a=np.zeros(np.asarray(pcd_3.points).shape)
+a[:5,:]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>X[:, 2]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>X[:,2]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>X{:,2}</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>X[:,0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>X[:,1]</expression-string>
+        <expression-string>X:,2</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -411,22 +419,27 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.hstack((pcd_points, pcd_colours))</expression-string>
+        <expression-string>np.asarray(pcd_target.points).shape[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>downpcd[0]</expression-string>
+        <expression-string>a[:np.asarray(pcd_target.points).shape[0],:]=np.asarray(pcd_target.points)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>downpcd</expression-string>
+        <expression-string>a</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>downpc</expression-string>
+        <expression-string>np.asarray(pcd_target.points).shape</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>np.asarray(pcd_target.points).shape()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -454,13 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="223" column="45" lean-forward="true" selection-start-line="223" selection-start-column="45" selection-end-line="223" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
@@ -506,6 +512,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codes/GMM_10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="133" column="21" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codes/GMM_11.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -513,63 +526,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codes/GMM_10.py">
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1193">
-          <caret line="133" column="21" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.5/dist-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="558" column="28" lean-forward="true" selection-start-line="558" selection-start-column="28" selection-end-line="558" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+        <state relative-caret-position="176">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/Data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-412">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/measure_distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-90">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#575#978#0" />
             <element signature="e#1017#1402#0" />
-            <element signature="e#2303#3148#0" />
+            <element signature="e#1441#2268#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="1020">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="581" selection-start-line="581" selection-end-line="581" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="e#9#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="93" column="52" lean-forward="true" selection-start-line="90" selection-start-column="12" selection-end-line="93" selection-end-column="52" />
+        <state relative-caret-position="169">
+          <caret line="428" column="111" selection-start-line="428" selection-start-column="111" selection-end-line="428" selection-end-column="111" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#7401#13850#0" />
+            <element signature="e#6295#12744#0" />
+            <element signature="e#12793#19015#0" />
           </folding>
         </state>
       </provider>
