@@ -329,9 +329,9 @@ class model():
             X=pcd_fpfh.data.transpose()
 
             # Start Standardize features==============================================================================
-            scaler = StandardScaler()
-            scaler.fit(X)
-            X = scaler.transform(X)  # here X_init has the big frame also
+            # scaler = StandardScaler()
+            # scaler.fit(X)
+            # X = scaler.transform(X)  # here X_init has the big frame also
             X_init = X[np.asarray(pcd_contour_mean.colors).argsort(axis=0)[0, 0]]
             # End  Standardize features==============================================================================
 
@@ -360,7 +360,6 @@ class model():
                 [[204, 0, 0], [0, 204, 0], [0, 0, 204], [255, 0, 127], [255, 255, 0], [127, 0, 255], [255, 128, 0],
                  [102, 51, 0], [255, 153, 153], [153, 255, 255], [0, 102, 102]]) / 255
             for i in range(np.unique(Y_).min(), np.unique(Y_).max() + 1):
-                # plt.scatter(X[Y_ == i, 0], X[Y_ == i, 1], .8, color=color)
                 X_old[Y_ == i, 3:6] = color[i]
             pcd.colors = Vector3dVector(X_old[:, 3:6])
             pcd.points = Vector3dVector(X_old[:, 0:3])
@@ -415,9 +414,9 @@ class model():
                 for x in range(0, self.image.shape[1]):
                     if cv.pointPolygonTest(contours[n_contour], (x, y), False) < 1:
                         self.image[y, x, :] = 100.
-                        self.depth[y, x] = 100
+                        self.depth[y, x] = 0
                         self.image_target[y, x, :] = 100.
-                        self.depth_target[y, x] = 100
+                        self.depth_target[y, x] = 0
             self.image_contours = np.copy(self.image)
             cv.drawContours(self.image_contours, contours[n_contour], -1, (0, 255, 0), 3)
             while 1:
@@ -441,7 +440,7 @@ class model():
             # X_init = X[np.asarray(pcd_contour_mean.colors).argsort(axis=0)[0, 0]]
 
             k1 = 1
-            X = X[X[:, 2] < 0.026, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
+            # X = X[X[:, 2] < 0.026, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
             cluster_span = 1
             n_components_range = range(k1, k1 + cluster_span)
             cv_types = ['full']

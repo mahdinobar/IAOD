@@ -32,7 +32,7 @@ def point_cloud(image,depth):
 
 
 def point_cloud_with_registration(image_source,depth_source,image_target,depth_target,ratio,
-                                  voxel_size = 0.05,threshold = 0.02):
+                                  voxel_size = 0.01,threshold = 0.01):
     '''
     This function takes two (image,depth), i.e two rgbd, and computes the point cloud of each corresponding rgbd (also
     by considering intrinsic camera calibration) and then uses global registration to obtain initialization for ICP
@@ -98,8 +98,12 @@ def point_cloud_with_registration(image_source,depth_source,image_target,depth_t
     pcd_3=copy.deepcopy(pcd_source)
     pcd_3.transform(reg_p2p.transformation.tolist())
 
-    target_points = np.zeros(np.asarray(pcd_3.points).shape)
-    target_points[:np.asarray(pcd_target.points).shape[0], :] = np.asarray(pcd_target.points)
+
+    if np.asarray(pcd_3.points).shape[0]>np.asarray(pcd_target.points).shape[0]:
+        target_points = np.zeros(np.asarray(pcd_3.points).shape)
+        target_points[:np.asarray(pcd_target.points).shape[0], :] = np.asarray(pcd_target.points)
+    else:
+        target_points = np.asarray(pcd_target.points)[:np.asarray(pcd_3.points).shape[0], :]
 
 
     pcd_3_temp = copy.deepcopy(pcd_3)
@@ -111,7 +115,7 @@ def point_cloud_with_registration(image_source,depth_source,image_target,depth_t
         np.linalg.norm(np.asarray(pcd_3_temp.points) - target_points, axis=1) < ratio * np.linalg.norm(
             np.asarray(pcd_3_temp.points) - target_points, axis=1).max()])
     open3d.draw_geometries([pcd_3])
-    return pcd_3
+    return pcd_source
 
 def draw_registration_result(source, target, transformation):
     source_temp = copy.deepcopy(source)
