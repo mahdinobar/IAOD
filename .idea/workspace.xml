@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c255caa4-277b-4cd6-9d14-81bf2e87e641" name="Default Changelist" comment="" />
+    <list default="true" id="c255caa4-277b-4cd6-9d14-81bf2e87e641" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/general/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/main_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/models.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,19 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="109" column="12" lean-forward="true" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#9#22#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="463">
+              <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -33,39 +26,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1028">
-              <caret line="462" column="26" selection-start-line="462" selection-start-column="21" selection-end-line="462" selection-end-column="26" />
+            <state relative-caret-position="464">
+              <caret line="481" lean-forward="true" selection-start-line="481" selection-end-line="481" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
                 <element signature="e#359#565#0" />
+                <element signature="e#598#6430#0" />
                 <element signature="e#6472#12921#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/general/Data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/general/measure_distance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#575#978#0" />
-                <element signature="e#1017#1402#0" />
-                <element signature="e#1441#2268#0" />
+                <element signature="e#12970#19121#0" />
               </folding>
             </state>
           </provider>
@@ -82,8 +50,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>part</find>
-      <find>rgbd_image</find>
       <find>self.depth</find>
       <find>part_mean</find>
       <find>X_copy</find>
@@ -95,7 +61,6 @@
       <find>pcd_points</find>
       <find>load</find>
       <find>vector</find>
-      <find>image</find>
       <find>depth</find>
       <find>depth2</find>
       <find>image2</find>
@@ -106,15 +71,17 @@
       <find>depth_2</find>
       <find>Vector3dVector</find>
       <find>point_cloud_with_registration</find>
-      <find>draw</find>
       <find>prepare_dataset</find>
       <find>2parts</find>
       <find>thres</find>
-      <find>4parts</find>
       <find>num_features</find>
+      <find>7parts</find>
+      <find>4parts</find>
+      <find>pcd</find>
+      <find>draw</find>
+      <find>image</find>
     </findStrings>
     <replaceStrings>
-      <replace>self.depth</replace>
       <replace>model_1</replace>
       <replace>cropped_depth</replace>
       <replace>mean_dist</replace>
@@ -144,6 +111,7 @@
       <replace>depth_2_source</replace>
       <replace>4parts</replace>
       <replace>2parts</replace>
+      <replace>7parts</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -162,8 +130,8 @@
         <option value="$PROJECT_DIR$/codes/general/measure_distance.py" />
         <option value="$PROJECT_DIR$/codes/GMM_11.py" />
         <option value="$PROJECT_DIR$/codes/general/utils.py" />
-        <option value="$PROJECT_DIR$/codes/general/main_1.py" />
         <option value="$PROJECT_DIR$/codes/general/models.py" />
+        <option value="$PROJECT_DIR$/codes/general/main_1.py" />
       </list>
     </option>
   </component>
@@ -179,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +178,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,6 +315,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -371,8 +340,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/codes/general/models.py</url>
-          <line>341</line>
+          <line>343</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/codes/general/main_1.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -393,7 +367,12 @@ a[:5,:]</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>X_old[:, 2]</expression-string>
+        <expression-string>np.sort(KL_divergence,axis=0)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>np.argsort(KL_divergence,axis=0)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -403,17 +382,7 @@ a[:5,:]</expression-string>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.asarray(pcd_3.points)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>target_points</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>np.asarray(pcd_target.points).shape[0],</expression-string>
+        <expression-string>X[:,2]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -423,17 +392,22 @@ a[:5,:]</expression-string>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>X[:,2]</expression-string>
+        <expression-string>contours[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>X:,2</expression-string>
+        <expression-string>contours</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.asarray(pcd_target.points).shape[0]</expression-string>
+        <expression-string>[]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>[1, 2, 3]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -544,6 +518,15 @@ a[:5,:]</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#9#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/measure_distance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -557,31 +540,24 @@ a[:5,:]</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
+    <entry file="file://$PROJECT_DIR$/codes/general/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="464">
+          <caret line="481" lean-forward="true" selection-start-line="481" selection-end-line="481" />
           <folding>
-            <element signature="e#9#22#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#359#565#0" />
+            <element signature="e#598#6430#0" />
+            <element signature="e#6472#12921#0" />
+            <element signature="e#12970#19121#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="109" column="12" lean-forward="true" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codes/general/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1028">
-          <caret line="462" column="26" selection-start-line="462" selection-start-column="21" selection-end-line="462" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#359#565#0" />
-            <element signature="e#6472#12921#0" />
-          </folding>
+        <state relative-caret-position="463">
+          <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
         </state>
       </provider>
     </entry>

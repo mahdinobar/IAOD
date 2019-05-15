@@ -23,7 +23,9 @@ class model():
 
     def model_1(self):
         """
-        Gaussian model (K=1) for each contour, OpenCV contour, open3d, normalization, no PCA, 3 features (x,y,z)
+        Gaussian model (K=1) for each contour, OpenCV contour, open3d, normalization, no PCA, 3 features (x,y,z),
+        with downsampling
+
         it can detect which object is missing at the same frame
         it can <mostly> detect which object among first 7 part frame is assembled with witch one at second 6 part image by seeing
         that the kl_divergance of which detection is increased in comparision with the time there is no assembly
@@ -94,11 +96,11 @@ class model():
             pcd_points = np.asarray(downpcd.points)
             pcd_colours = np.asarray(downpcd.colors)
             X = np.hstack((pcd_points, pcd_colours))
-            scaler = StandardScaler()
-            scaler.fit(X)
-            X = scaler.transform(X)
             k1 = 1
-            X = X[X[:, 2] < -0.0004, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
+            X = X[X[:, 2] < -0.00040, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
+            # scaler = StandardScaler()
+            # scaler.fit(X)
+            # X = scaler.transform(X)
             cluster_span = 1
             n_components_range = range(k1, k1 + cluster_span)
             cv_types = ['full']
@@ -370,24 +372,31 @@ class model():
         """
         Gaussian model (K=1) for each contour, OpenCV contour, open3d, normalization, no PCA, 3 features (x,y,z)
         it can detect which object is missing at the same frame
-        it can <mostly> detect which object among first 7 part frame is assembled with witch one at second 6 part image by seeing
+        it can detect which object among first 7 part frame is assembled with witch one at second 6 part image by seeing
         that the kl_divergance of which detection is increased in comparision with the time there is no assembly
-        (<mostly> because e.g except for little cubes with the larges part,...)
+        (the problem of model one that could not detect small object is merged with the L shape one is solved by
+        adding global and local registration to reduce the noise effect+not using initialization of gaussian mean+
+        by standardization of only three features (x,y,z) that gaussian is trained+by removal of small contours inside
+        the gears by removal of contours with small number of points so the countours fit tightly to the objects and
+        erosion is not used anymore
         """
         print(__doc__)
-        # self.image = np.load("image_contours_4.npy")
-        # self.depth = np.load("self.depth_contours_4.npy")
         imgray = cv.cvtColor(self.image, cv.COLOR_BGR2GRAY)
-        kernel = np.ones((16, 16), np.uint8)
-        imgray = cv.erode(imgray, kernel, iterations=1)
+        # kernel = np.ones((16, 16), np.uint8)
+        # imgray = cv.erode(imgray, kernel, iterations=1)
         ret, thresh = cv.threshold(imgray, 127, 255, 0)
         while 1:
             cv.imshow('thresh', thresh)
             key = cv.waitKey(1)
             if key == 27:
                 break
-        contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE,
+        contours_all, hierarchy = cv.findContours(thresh, cv.RETR_TREE,
                                               cv.CHAIN_APPROX_NONE)  # contours contains here the pixel index of the corresponding points
+        contours=[]
+        for i in range (0,contours_all.__len__()):
+            if contours_all[i].size>200:
+                contours.append(contours_all[i])
+
         contours_mean = np.empty([len(contours), 2])
         for n_contour in range(0, len(contours)):
             # find the mean value for the detected contours
@@ -413,9 +422,9 @@ class model():
             for y in range(0, self.image.shape[0]):
                 for x in range(0, self.image.shape[1]):
                     if cv.pointPolygonTest(contours[n_contour], (x, y), False) < 1:
-                        self.image[y, x, :] = 100.
+                        self.image[y, x, :] = 255.
                         self.depth[y, x] = 0
-                        self.image_target[y, x, :] = 100.
+                        self.image_target[y, x, :] = 255.
                         self.depth_target[y, x] = 0
             self.image_contours = np.copy(self.image)
             cv.drawContours(self.image_contours, contours[n_contour], -1, (0, 255, 0), 3)
@@ -426,21 +435,23 @@ class model():
                 if key == 27:
                     break
             pcd=point_cloud_with_registration(self.image,self.depth,self.image_target,self.depth_target,ratio=1)
-            # open3d.draw_geometries([pcd])
-            # reg=open3d.registration.registration_icp(pcd,pcd,0.001)
-            # fpfh=open3d.registration.compute_fpfh_feature(pcd, KDTreeSearchParamHybrid(radius = 0.1, max_nn = 100))
             pcd_points = np.asarray(pcd.points)
             pcd_colours = np.asarray(pcd.colors)
             X = np.hstack((pcd_points, pcd_colours))
 
             #standardize features
             scaler = StandardScaler()
-            scaler.fit(X)
-            X = scaler.transform(X)  # here X_init has the big frame also
+            scaler.fit(X[:,:3])
+            X[:,:3] = scaler.transform(X[:,:3])  # here X_init has the big frame also
             # X_init = X[np.asarray(pcd_contour_mean.colors).argsort(axis=0)[0, 0]]
+            #
+            # downpcd = open3d.voxel_down_sample(pcd, voxel_size=0.0000005)
+            # pcd_points = np.asarray(downpcd.points)
+            # pcd_colours = np.asarray(downpcd.colors)
+            # X = np.hstack((pcd_points, pcd_colours))
 
             k1 = 1
-            # X = X[X[:, 2] < 0.026, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
+            # X = X[X[:, 2] < -0.0004, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
             cluster_span = 1
             n_components_range = range(k1, k1 + cluster_span)
             cv_types = ['full']
@@ -462,7 +473,7 @@ class model():
                  [102, 51, 0], [255, 153, 153], [153, 255, 255], [0, 102, 102]]) / 255
             for i in range(np.unique(Y_).min(), np.unique(Y_).max() + 1):
                 # plt.scatter(X[Y_ == i, 0], X[Y_ == i, 1], .8, color=color)
-                X_copy[Y_ == i, 3:6] = color[i]
+                X_copy[Y_ == i, 3:6] = color[i+1]
             pcd.colors = Vector3dVector(X_copy[:, 3:6])
             pcd.points = Vector3dVector(X_copy[:, 0:3])
             open3d.draw_geometries([pcd])
