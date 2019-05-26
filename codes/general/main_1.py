@@ -11,8 +11,8 @@ from measure_distance import models_distance
 # image_source,depth_source, cropped_window=data.get_data(None)
 # np.save('image_sequence_1_1_one.npy', image_source)
 # np.save('depth_sequence_1_1_one.npy', depth_source)
-image_source=np.load('image_sequence_2_1_one.npy')
-depth_source=np.load('depth_sequence_2_1_one.npy')
+image_source=np.load('image_sequence_1_1_one.npy')
+depth_source=np.load('depth_sequence_1_1_one.npy')
 while 1:
     cv.imshow('image_source', image_source)
     key = cv.waitKey(1)
@@ -21,40 +21,40 @@ while 1:
 # image_2_source,depth_2_source,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_1_two.npy', image_2_source)
 # np.save('depth_sequence_1_1_two.npy', depth_2_source)
-image_2_source=np.load('image_sequence_2_2_one.npy')
-depth_2_source=np.load('depth_sequence_2_2_one.npy')
+image_2_source=np.load('image_sequence_1_2_one.npy')
+depth_2_source=np.load('depth_sequence_1_2_one.npy')
 while 1:
     cv.imshow('image_2_source', image_2_source)
     key = cv.waitKey(1)
     if key==27:
         break
 
-# image_2_source,depth_2_source,_=data.get_data(cropped_window)
-# np.save('image_sequence_1_2_one.npy', image_2_source)
-# np.save('depth_sequence_1_2_one.npy', depth_2_source)
-image_target=np.load('image_sequence_2_1_two.npy')
-depth_target=np.load('depth_sequence_2_1_two.npy')
+# image_target,depth_target,_=data.get_data(cropped_window)
+# np.save('image_sequence_1_2_one.npy', image_target)
+# np.save('depth_sequence_1_2_one.npy', depth_target)
+image_target=np.load('image_sequence_1_1_two.npy')
+depth_target=np.load('depth_sequence_1_1_two.npy')
 while 1:
     cv.imshow('image_target', image_target)
     key = cv.waitKey(1)
     if key==27:
         break
-# image_2_source,depth_2_source,_=data.get_data(cropped_window)
-# np.save('image_sequence_1_2_two.npy', image_2_source)
-# np.save('depth_sequence_1_2_two.npy', depth_2_source)
-image_2_target=np.load('image_sequence_2_2_two.npy')
-depth_2_target=np.load('depth_sequence_2_2_two.npy')
+# image_2_target,depth_2_target,_=data.get_data(cropped_window)
+# np.save('image_sequence_1_2_two.npy', image_2_target)
+# np.save('depth_sequence_1_2_two.npy', depth_2_target)
+image_2_target=np.load('image_sequence_1_2_two.npy')
+depth_2_target=np.load('depth_sequence_1_2_two.npy')
 while 1:
     cv.imshow('image_2_target', image_2_target)
     key = cv.waitKey(1)
     if key==27:
         break
-#
+
 # image_target,depth_target,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_3_one.npy', image_target)
 # np.save('depth_sequence_1_3_one.npy', depth_target)
-# # image_target=np.load('image_7parts_3.npy')
-# # depth_target=np.load('depth_7parts_3.npy')
+# # # image_target=np.load('image_7parts_3.npy')
+# # # depth_target=np.load('depth_7parts_3.npy')
 # while 1:
 #     cv.imshow('image_1_3_one', image_target)
 #     key = cv.waitKey(1)
@@ -63,19 +63,19 @@ while 1:
 # image_2_source,depth_2_source,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_3_two.npy', image_2_source)
 # np.save('depth_sequence_1_3_two.npy', depth_2_source)
-# # image_2_source=np.load('image_6parts.npy')
-# # depth_2_source=np.load('depth_6parts.npy')
+# # # image_2_source=np.load('image_6parts.npy')
+# # # depth_2_source=np.load('depth_6parts.npy')
 # while 1:
 #     cv.imshow('image_1_3_two', image_2_source)
 #     key = cv.waitKey(1)
 #     if key==27:
 #         break
-#
+# #
 # image_2_target,depth_2_target,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_4_one.npy', image_2_target)
 # np.save('depth_sequence_1_4_one.npy', depth_2_target)
-# # image_2_target=np.load('image_7parts_4.npy')
-# # depth_2_target=np.load('depth_7parts_4.npy')
+# # # image_2_target=np.load('image_7parts_4.npy')
+# # # depth_2_target=np.load('depth_7parts_4.npy')
 # while 1:
 #     cv.imshow('image_1_4_one', image_2_target)
 #     key = cv.waitKey(1)
@@ -84,8 +84,8 @@ while 1:
 # image_2_source,depth_2_source,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_4_two.npy', image_2_source)
 # np.save('depth_sequence_1_4_two.npy', depth_2_source)
-# # image_2_source=np.load('image_6parts.npy')
-# # depth_2_source=np.load('depth_6parts.npy')
+# # # image_2_source=np.load('image_6parts.npy')
+# # # depth_2_source=np.load('depth_6parts.npy')
 # while 1:
 #     cv.imshow('image_1_4_two', image_2_source)
 #     key = cv.waitKey(1)
@@ -95,8 +95,8 @@ while 1:
 # image_2_target,depth_2_target,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_5_one.npy', image_2_target)
 # np.save('depth_sequence_1_5_one.npy', depth_2_target)
-# # image_2_target=np.load('image_7parts_4.npy')
-# # depth_2_target=np.load('depth_7parts_4.npy')
+# # # image_2_target=np.load('image_7parts_4.npy')
+# # # depth_2_target=np.load('depth_7parts_4.npy')
 # while 1:
 #     cv.imshow('image_1_5_one', image_2_target)
 #     key = cv.waitKey(1)
@@ -105,19 +105,19 @@ while 1:
 # image_2_source,depth_2_source,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_5_two.npy', image_2_source)
 # np.save('depth_sequence_1_5_two.npy', depth_2_source)
-# # image_2_source=np.load('image_6parts.npy')
-# # depth_2_source=np.load('depth_6parts.npy')
+# # # image_2_source=np.load('image_6parts.npy')
+# # # depth_2_source=np.load('depth_6parts.npy')
 # while 1:
 #     cv.imshow('image_1_5_two', image_2_source)
 #     key = cv.waitKey(1)
 #     if key==27:
 #         break
-#
+# #
 # image_2_target,depth_2_target,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_6_one.npy', image_2_target)
 # np.save('depth_sequence_1_6_one.npy', depth_2_target)
-# # image_2_target=np.load('image_7parts_4.npy')
-# # depth_2_target=np.load('depth_7parts_4.npy')
+# # # image_2_target=np.load('image_7parts_4.npy')
+# # # depth_2_target=np.load('depth_7parts_4.npy')
 # while 1:
 #     cv.imshow('image_1_6_one', image_2_target)
 #     key = cv.waitKey(1)
@@ -126,19 +126,19 @@ while 1:
 # image_2_source,depth_2_source,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_6_two.npy', image_2_source)
 # np.save('depth_sequence_1_6_two.npy', depth_2_source)
-# # image_2_source=np.load('image_6parts.npy')
-# # depth_2_source=np.load('depth_6parts.npy')
+# # # image_2_source=np.load('image_6parts.npy')
+# # # depth_2_source=np.load('depth_6parts.npy')
 # while 1:
 #     cv.imshow('image_1_6_two', image_2_source)
 #     key = cv.waitKey(1)
 #     if key==27:
 #         break
-#
+
 # image_2_target,depth_2_target,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_7_one.npy', image_2_target)
 # np.save('depth_sequence_1_7_one.npy', depth_2_target)
-# # image_2_target=np.load('image_7parts_4.npy')
-# # depth_2_target=np.load('depth_7parts_4.npy')
+# # # image_2_target=np.load('image_7parts_4.npy')
+# # # depth_2_target=np.load('depth_7parts_4.npy')
 # while 1:
 #     cv.imshow('image_1_7_one', image_2_target)
 #     key = cv.waitKey(1)
@@ -147,8 +147,8 @@ while 1:
 # image_2_source,depth_2_source,_=data.get_data(cropped_window)
 # np.save('image_sequence_1_7_two.npy', image_2_source)
 # np.save('depth_sequence_1_7_two.npy', depth_2_source)
-# # image_2_source=np.load('image_6parts.npy')
-# # depth_2_source=np.load('depth_6parts.npy')
+# # # image_2_source=np.load('image_6parts.npy')
+# # # depth_2_source=np.load('depth_6parts.npy')
 # while 1:
 #     cv.imshow('image_1_7_two', image_2_source)
 #     key = cv.waitKey(1)

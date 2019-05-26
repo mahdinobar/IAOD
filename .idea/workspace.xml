@@ -3,7 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="c255caa4-277b-4cd6-9d14-81bf2e87e641" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_1_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_1_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_2_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_2_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_3_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_3_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_4_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_4_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_5_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_5_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_6_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_6_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_7_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/depth_sequence_1_7_two.npy" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/general/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/main_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_1_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_1_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_2_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_2_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_3_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_3_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_4_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_4_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_5_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_5_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_6_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_6_two.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_7_one.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/image_sequence_1_7_two.npy" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,22 +41,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="191" column="41" lean-forward="true" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
+            <state relative-caret-position="383">
+              <caret line="190" column="8" lean-forward="true" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codes/general/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6390">
-              <caret line="426" selection-start-line="426" selection-end-line="426" />
+            <state relative-caret-position="309">
+              <caret line="442" column="25" lean-forward="true" selection-start-line="442" selection-start-column="25" selection-end-line="442" selection-end-column="25" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#359#565#0" />
               </folding>
             </state>
           </provider>
@@ -46,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="2055">
               <caret line="158" column="62" selection-start-line="158" selection-start-column="62" selection-end-line="158" selection-end-column="62" />
               <folding>
                 <element signature="e#9#22#0" expanded="true" />
@@ -59,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/measure_distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="585">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -161,9 +190,9 @@
         <option value="$PROJECT_DIR$/codes/general/Data.py" />
         <option value="$PROJECT_DIR$/codes/general/measure_distance.py" />
         <option value="$PROJECT_DIR$/codes/GMM_11.py" />
-        <option value="$PROJECT_DIR$/codes/general/models.py" />
         <option value="$PROJECT_DIR$/codes/general/utils.py" />
         <option value="$PROJECT_DIR$/codes/general/main_1.py" />
+        <option value="$PROJECT_DIR$/codes/general/models.py" />
       </list>
     </option>
   </component>
@@ -330,7 +359,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1217" height="1029" extended-state="6" />
+    <frame x="65" y="-4" width="1215" height="1028" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -446,13 +475,6 @@ a[:5,:]</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codes/GMM_12.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -552,7 +574,7 @@ a[:5,:]</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/measure_distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="585">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -565,12 +587,33 @@ a[:5,:]</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="2055">
           <caret line="158" column="62" selection-start-line="158" selection-start-column="62" selection-end-line="158" selection-end-column="62" />
           <folding>
             <element signature="e#9#22#0" expanded="true" />
             <element signature="e#91#785#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="414" selection-start-line="414" selection-end-line="414" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="190" column="8" lean-forward="true" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -583,18 +626,12 @@ a[:5,:]</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6390">
-          <caret line="426" selection-start-line="426" selection-end-line="426" />
+        <state relative-caret-position="309">
+          <caret line="442" column="25" lean-forward="true" selection-start-line="442" selection-start-column="25" selection-end-line="442" selection-end-column="25" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#359#565#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="191" column="41" lean-forward="true" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
         </state>
       </provider>
     </entry>
