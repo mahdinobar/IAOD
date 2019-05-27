@@ -122,8 +122,22 @@ for iter in range(0,9):
                 eval_kl_argsort[0, np.where(eval_kl_argsort[0] == k)[0][1]] = \
                 eval_kl_argsort[1, np.where(eval_kl_argsort[0] == k)[0][1]]
 
-
-
 print(np.argsort(KL_divergence,axis=0)[0,:])
 print(np.sort(KL_divergence,axis=0)[0,:])
+
+
+def bmatrix(a):
+    """Returns a LaTeX bmatrix
+
+    :a: numpy array
+    :returns: LaTeX bmatrix as a string
+    """
+    if len(a.shape) > 2:
+        raise ValueError('bmatrix can at most display two dimensions')
+    lines = str(a).replace('[', '').replace(']', '').splitlines()
+    rv = [r'\begin{bmatrix}']
+    rv += ['  ' + ' & '.join(l.split()) + r'\\' for l in lines]
+    rv +=  [r'\end{bmatrix}']
+    return '\n'.join(rv)
+
 print('end')
