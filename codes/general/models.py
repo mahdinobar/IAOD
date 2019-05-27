@@ -91,11 +91,11 @@ class model():
             X_init = X[np.asarray(pcd_contour_mean.colors).argsort(axis=0)[0, 0]]
 
 
-            #downsampling the point cloud to pick the average value inside each voxel
-            downpcd = open3d.voxel_down_sample(pcd, voxel_size=0.0000001)
-            pcd_points = np.asarray(downpcd.points)
-            pcd_colours = np.asarray(downpcd.colors)
-            X = np.hstack((pcd_points, pcd_colours))
+            # #downsampling the point cloud to pick the average value inside each voxel
+            # downpcd = open3d.voxel_down_sample(pcd, voxel_size=0.0000001)
+            # pcd_points = np.asarray(downpcd.points)
+            # pcd_colours = np.asarray(downpcd.colors)
+            # X = np.hstack((pcd_points, pcd_colours))
             k1 = 1
             X = X[X[:, 2] < -0.00040, :]  #this is used to remove out the background witch is a way higher it needs to be generalized for any taken frame
             # scaler = StandardScaler()
