@@ -125,19 +125,20 @@ for iter in range(0,9):
 print(np.argsort(KL_divergence,axis=0)[0,:])
 print(np.sort(KL_divergence,axis=0)[0,:])
 
-
 def bmatrix(a):
-    """Returns a LaTeX bmatrix
+    text = r'$\left[\begin{array}{*{'
+    text += str(len(a[0]))
+    text += r'}c}'
+    text += '\n'
+    for x in range(len(a)):
+        for y in range(len(a[x])):
+            text += str(a[x][y])
+            text += r' & '
+        text = text[:-2]
+        text += r'\\'
+        text += '\n'
+    text += r'\end{array}\right]$'
 
-    :a: numpy array
-    :returns: LaTeX bmatrix as a string
-    """
-    if len(a.shape) > 2:
-        raise ValueError('bmatrix can at most display two dimensions')
-    lines = str(a).replace('[', '').replace(']', '').splitlines()
-    rv = [r'\begin{bmatrix}']
-    rv += ['  ' + ' & '.join(l.split()) + r'\\' for l in lines]
-    rv +=  [r'\end{bmatrix}']
-    return '\n'.join(rv)
+    print(text)
 
 print('end')
