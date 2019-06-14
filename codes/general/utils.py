@@ -107,15 +107,19 @@ def point_cloud_with_registration(image_source,depth_source,image_target,depth_t
 
 
     pcd_3_temp = copy.deepcopy(pcd_3)
-    pcd_3.points=open3d.Vector3dVector(np.asarray(pcd_3.points)[
-        np.linalg.norm(np.asarray(pcd_3.points) - target_points, axis=1) < ratio * np.linalg.norm(
-            np.asarray(pcd_3.points) - target_points, axis=1).max()])
-
-    pcd_3.colors=open3d.Vector3dVector(np.asarray(pcd_3.colors)[
-        np.linalg.norm(np.asarray(pcd_3_temp.points) - target_points, axis=1) < ratio * np.linalg.norm(
-            np.asarray(pcd_3_temp.points) - target_points, axis=1).max()])
+    # pcd_3.points=open3d.Vector3dVector(np.asarray(pcd_3.points)[
+    #     np.linalg.norm(np.asarray(pcd_3.points) - target_points, axis=1) < ratio * np.linalg.norm(
+    #         np.asarray(pcd_3.points) - target_points, axis=1).max()])
+    pcd_3.points=open3d.Vector3dVector(np.asarray(pcd_3.points)[np.argsort(np.linalg.norm(np.asarray(pcd_3_temp.points) - target_points, axis=1))[
+                             0:np.around(ratio * np.asarray(pcd_3_temp.points).shape[0]).astype(int)], :])
+    pcd_3.colors = open3d.Vector3dVector(
+        np.asarray(pcd_3.colors)[np.argsort(np.linalg.norm(np.asarray(pcd_3_temp.points) - target_points, axis=1))[
+                                 0:np.around(ratio * np.asarray(pcd_3_temp.points).shape[0]).astype(int)], :])
+    # pcd_3.colors=open3d.Vector3dVector(np.asarray(pcd_3.colors)[
+    #     np.linalg.norm(np.asarray(pcd_3_temp.points) - target_points, axis=1) < ratio * np.linalg.norm(
+    #         np.asarray(pcd_3_temp.points) - target_points, axis=1).max()])
     open3d.draw_geometries([pcd_3])
-    return pcd_source
+    return pcd_3
 
 def draw_registration_result(source, target, transformation):
     source_temp = copy.deepcopy(source)

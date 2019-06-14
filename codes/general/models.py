@@ -434,7 +434,7 @@ class model():
                 key = cv.waitKey(1)
                 if key == 27:
                     break
-            pcd=point_cloud_with_registration(self.image,self.depth,self.image_target,self.depth_target,ratio=1)
+            pcd=point_cloud_with_registration(self.image,self.depth,self.image_target,self.depth_target,ratio=0.95)
             pcd_points = np.asarray(pcd.points)
             pcd_colours = np.asarray(pcd.colors)
             X = np.hstack((pcd_points, pcd_colours))
