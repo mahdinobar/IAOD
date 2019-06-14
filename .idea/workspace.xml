@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c255caa4-277b-4cd6-9d14-81bf2e87e641" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/codes/general/main_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/main_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/general/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/general/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-891">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="433">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
               <folding>
                 <element signature="e#10#26#0" expanded="true" />
               </folding>
@@ -25,14 +25,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="112" column="24" lean-forward="true" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#9#22#0" expanded="true" />
-                <element signature="e#91#785#0" />
               </folding>
             </state>
           </provider>
@@ -41,11 +40,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/general/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="436" column="107" selection-start-line="436" selection-start-column="107" selection-end-line="436" selection-end-column="107" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#359#565#0" />
               </folding>
             </state>
           </provider>
@@ -86,7 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>part_mean</find>
       <find>X_copy</find>
       <find>full</find>
       <find>print</find>
@@ -116,6 +113,7 @@
       <find>draw</find>
       <find>image</find>
       <find>ratio</find>
+      <find>bgr</find>
     </findStrings>
     <replaceStrings>
       <replace>model_1</replace>
@@ -165,9 +163,9 @@
         <option value="$PROJECT_DIR$/codes/general/Data.py" />
         <option value="$PROJECT_DIR$/codes/general/measure_distance.py" />
         <option value="$PROJECT_DIR$/codes/GMM_11.py" />
-        <option value="$PROJECT_DIR$/codes/general/main_1.py" />
-        <option value="$PROJECT_DIR$/codes/general/models.py" />
         <option value="$PROJECT_DIR$/codes/general/utils.py" />
+        <option value="$PROJECT_DIR$/codes/general/models.py" />
+        <option value="$PROJECT_DIR$/codes/general/main_1.py" />
       </list>
     </option>
   </component>
@@ -370,13 +368,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/codes/general/models.py</url>
-          <line>343</line>
+          <line>344</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/codes/general/main_1.py</url>
-          <line>143</line>
-          <option name="timeStamp" value="48" />
+          <line>147</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -575,34 +573,32 @@ a[:5,:]</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#9#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="436" column="107" selection-start-line="436" selection-start-column="107" selection-end-line="436" selection-end-column="107" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#359#565#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codes/general/main_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-891">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="433">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
           <folding>
             <element signature="e#10#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codes/general/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="112" column="24" lean-forward="true" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
-          <folding>
-            <element signature="e#9#22#0" expanded="true" />
-            <element signature="e#91#785#0" />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,9 @@ import numpy as np
 from models import model
 from Data import data
 from measure_distance import models_distance
+import time
+start = time.time()
+
 
 # image_source,depth_source, cropped_window=data.get_data(None)
 # np.save('image_7parts_1.npy', image_source)
@@ -141,4 +144,5 @@ def bmatrix(a):
 
     print(text)
 
-print('end')
+end = time.time()
+print('elapsed time is: ',end - start)
